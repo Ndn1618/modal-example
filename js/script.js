@@ -4,9 +4,9 @@ var modal = document.querySelector('.modal');
 var modalClose = document.querySelector('.modal-close');
 
 var logKeyCode = function (evt) {
-  console.log(evt.code);
   if (evt.code === 'Escape') {
     modalBg.classList.remove('bg-active');
+    document.body.removeEventListener('keyup', logKeyCode);
   }
 };
 
