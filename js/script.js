@@ -16,8 +16,8 @@ modalBtn.addEventListener('click', function () {
 });
 
 modalBg.addEventListener('click', function (evt) {
-  if (!evt.target.matches('.modal') && !evt.target.matches('.modal-title') && !evt.target.matches('.modal-body')) {
-    modalBg.classList.remove('bg-active');
+  if (!evt.target.matches('.modal-bg')) {
+    // modalBg.classList.remove('bg-active');
     document.body.removeEventListener('keyup', logKeyCode);
   }
 });
